@@ -34,51 +34,51 @@ flowchart TB
 
   subgraph ClientSide[Client Side]
     C1[Client Integrity Probe]
-    C2[Session / Heartbeat]
-    C3[Optional: Hardware Fingerprint]
+    C2[Session Heartbeat]
+    C3[Hardware Fingerprint Optional]
   end
 
   subgraph ServerSide[Server Side]
     S0[Sentinel Core Engine]
 
-    subgraph Detection[Detection & Signals]
+    subgraph Detection[Detection Signals]
       D1[Behavior Monitor]
-      D2[Movement / Aim Heuristics]
-      D3[Injection / Tamper Flags]
-      D4[Network & Packet Anomalies]
-      D5[Resource / File Integrity]
+      D2[Movement Aim Heuristics]
+      D3[Injection Tamper Flags]
+      D4[Network Packet Anomalies]
+      D5[Resource File Integrity]
     end
 
-    subgraph Scoring[Decision & Intelligence]
+    subgraph Scoring[Decision Intelligence]
       A1[Risk Scoring Engine]
       A2[Rules Engine]
-      A3[ML / Behavior AI (Optional)]
-      A4[False-Positive Guard]
+      A3[Behavior AI Optional]
+      A4[False Positive Guard]
     end
 
-    subgraph Actions[Actions & Enforcement]
-      E1[Alerting & Evidence Capture]
-      E2[Auto Actions: Kick / Temp Ban]
+    subgraph Actions[Actions Enforcement]
+      E1[Alerting Evidence Capture]
+      E2[Auto Actions Kick TempBan]
       E3[Manual Review Queue]
-      E4[Staff Approve / Reject Logs]
+      E4[Staff Approve Reject Logs]
     end
 
     subgraph Data[Data Layer]
       DB1[(Event Store)]
       DB2[(Player Profiles)]
       DB3[(Audit Logs)]
-      DB4[(Config & Rules)]
+      DB4[(Config Rules)]
     end
 
     subgraph Integrations[Integrations]
-      I1[Admin Panel / Dashboard]
-      I2[Discord / Webhooks]
+      I1[Admin Dashboard]
+      I2[Discord Webhooks]
       I3[Game Server API Adapter]
-      I4[SIEM / External Security (Optional)]
+      I4[External Security SIEM Optional]
     end
   end
 
-  ClientSide -->|Telemetry / Signals| S0
+  ClientSide -->|Telemetry Signals| S0
   S0 --> Detection
   Detection --> Scoring
   Scoring --> Actions
