@@ -86,3 +86,41 @@ flowchart TB
   Scoring --> Data
   Data --> Integrations
   Integrations -->|Moderation Decisions| Actions
+
+
+## Risk Score Lifecycle (State Diagram)
+
+```mermaid
+stateDiagram-v2
+  [*] --> Idle
+
+  Idle --> Collecting : Player Activity
+  Collecting --> Normalizing : Telemetry Received
+  Normalizing --> Evaluating : Signals Ready
+
+  Evaluating --> LowRisk : Score < Threshold Low
+  Evaluating --> MediumRisk : Score >= Threshold Low
+  Evaluating --> HighRisk : Score >= Threshold High
+  Evaluating --> CriticalRisk : Score >= Threshold Critical
+
+  LowRisk --> Idle : Log Only
+
+  MediumRisk --> Observing : Shadow Monitoring
+  Observing --> Idle : Cooldown Passed
+  Observing --> Escalated : Repeated Signals
+
+  HighRisk --> Restricted : Soft Enforcement
+  Restricted --> ReviewQueue : Manual Review
+  Restricted --> Idle : Risk Decay
+
+  CriticalRisk --> Enforced : Hard Enforcement
+  Enforced --> ReviewQueue : Evidence Captured
+
+  ReviewQueue --> Approved : Staff Approve
+  ReviewQueue --> Rejected : False Positive
+
+  Approved --> PolicyUpdate : Rule Update
+  Rejected --> ModelAdjustment : Calibration
+
+  PolicyUpdate --> Idle
+  ModelAdjustment --> Idle
