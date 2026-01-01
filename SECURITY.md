@@ -28,7 +28,7 @@ Only actively maintained versions are eligible for security support.
 If you discover a potential security issue, please report it privately using one of the following methods:
 
 ### Preferred Method
-- **Email:** `security@proximity.systems` *(replace with your official address)*
+- **Email:** `info@proximitysystems.xyz` 
 
 ### Alternative
 - Private message to a Proximity Systems core maintainer
