@@ -30,8 +30,6 @@ Unauthorized usage or redistribution is prohibited.
 
 ```mermaid
 flowchart TB
-  %% Proximity Sentinel - Modular Architecture
-
   subgraph ClientSide[Client Side]
     C1[Client Integrity Probe]
     C2[Session Heartbeat]
@@ -86,36 +84,3 @@ flowchart TB
   Scoring --> Data
   Data --> Integrations
   Integrations -->|Moderation Decisions| Actions
----
-
-## Risk Score Lifecycle (Flow)
-
-```mermaid
-flowchart TB
-  A[Player Telemetry] --> B[Signal Collection]
-  B --> C[Signal Normalization]
-  C --> D[Feature Extraction]
-
-  D --> E1[Behavior Signals]
-  D --> E2[Integrity Signals]
-  D --> E3[Network Signals]
-  D --> E4[Pattern History]
-
-  E1 --> F[Risk Scoring Engine]
-  E2 --> F
-  E3 --> F
-  E4 --> F
-
-  F --> G[Confidence Weighting]
-  G --> H[False Positive Guard]
-
-  H --> I{Risk Level}
-  I -->|Low| J[Log Only]
-  I -->|Medium| K[Shadow Monitoring]
-  I -->|High| L[Soft Enforcement]
-  I -->|Critical| M[Hard Enforcement]
-
-  J --> N[(Player Profile)]
-  K --> N
-  L --> N
-  M --> N
