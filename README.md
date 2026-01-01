@@ -84,3 +84,38 @@ flowchart TB
   Scoring --> Data
   Data --> Integrations
   Integrations -->|Moderation Decisions| Actions
+
+```
+
+---
+
+```mermaid
+stateDiagram-v2
+  [*] --> Idle
+
+  Idle --> Collecting
+  Collecting --> Evaluating
+
+  Evaluating --> LowRisk
+  Evaluating --> MediumRisk
+  Evaluating --> HighRisk
+  Evaluating --> CriticalRisk
+
+  LowRisk --> Idle
+
+  MediumRisk --> Observing
+  Observing --> Idle
+  Observing --> Escalated
+
+  HighRisk --> Restricted
+  Restricted --> ReviewQueue
+  Restricted --> Idle
+
+  CriticalRisk --> Enforced
+  Enforced --> ReviewQueue
+
+  ReviewQueue --> Approved
+  ReviewQueue --> Rejected
+
+  Approved --> Idle
+  Rejected --> Idle
