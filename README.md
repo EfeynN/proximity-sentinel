@@ -1,8 +1,34 @@
 # Proximity Sentinel
 
+![Status](https://img.shields.io/badge/status-active_development-blue)
+![Release](https://img.shields.io/badge/release-v0.1.0-informational)
+![Security](https://img.shields.io/badge/security-policy_enabled-success)
+![License](https://img.shields.io/badge/license-private-lightgrey)
+
 Proximity Sentinel is a high-performance anti-cheat and security suite developed under Proximity Systems.
 
 It focuses on detecting unfair gameplay, abnormal behavior patterns, and unauthorized client modifications through real-time analysis and modular security layers.
+
+---
+
+## Preview
+
+![Proximity Sentinel UI Preview](./proximity-systems-sentinelv8.png)
+
+---
+
+## Why Proximity Sentinel?
+
+Most anti-cheat systems rely on single-event detections and aggressive enforcement.  
+Proximity Sentinel takes a different, security-first approach.
+
+- Behavior-based detection instead of signatures  
+- Cumulative risk scoring rather than instant punishment  
+- Human-in-the-loop enforcement  
+- Auditability and traceability by design  
+- Built for long-term stability, not short-term bans  
+
+Proximity Sentinel is designed as a **security platform**, not just an anti-cheat.
 
 ---
 
@@ -85,7 +111,6 @@ flowchart TB
   Data --> Integrations
   Integrations -->|Moderation Decisions| Actions
 
-```
 
 ---
 
