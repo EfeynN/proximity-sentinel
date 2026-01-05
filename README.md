@@ -111,9 +111,11 @@ flowchart TB
   Scoring --> Data
   Data --> Integrations
   Integrations -->|Moderation Decisions| Actions
-
+```
 
 ---
+
+## Risk Score Lifecycle (State Diagram)
 
 ```mermaid
 stateDiagram-v2
@@ -145,3 +147,4 @@ stateDiagram-v2
 
   Approved --> Idle
   Rejected --> Idle
+
