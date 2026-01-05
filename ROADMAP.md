@@ -14,7 +14,7 @@ Dates are indicative and subject to change based on security findings and testin
 | v0.3.0 | Core Engine | ✅ Completed | Modularity | Modular core engine, signal routing, lifecycle management |
 | v0.4.0 | Detection Expansion | ✅ Completed | Detection | Behavior detection, network anomaly detection, historical signal tracking |
 | v0.5.0 | Risk Scoring System | ✅ Completed | Intelligence | Cumulative risk score, time-based decay, threshold logic |
-| v0.6.0 | False Positive Guard | 🔄 In Progress | Accuracy | Confidence weighting, cross-signal correlation, FP reduction |
+| v0.6.0 | False Positive Guard | ✅ Completed | Accuracy | Confidence weighting, cross-signal correlation, FP reduction |
 | v0.7.0 | Review Layer | ✅ Completed | Human-in-the-loop | Manual review queue, approve/reject workflows, audit trail |
 | v0.8.0 | Enforcement Control | ✅ Completed | Enforcement | Soft vs hard enforcement, cooldowns, enforcement decay |
 | v0.9.0 | Release Candidate | ✅ Completed | Stabilization | Performance optimization, noise reduction, security validation |
