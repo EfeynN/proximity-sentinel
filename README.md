@@ -3,6 +3,7 @@
 ![Status](https://img.shields.io/badge/status-active_development-blue)
 ![Release](https://img.shields.io/github/v/release/EfeynN/proximity-sentinel)
 ![Security](https://img.shields.io/badge/security-policy_enabled-success)
+![Contributing](https://img.shields.io/badge/contributions-welcome-brightgreen)
 ![License](https://img.shields.io/badge/license-private-lightgrey)
 
 Proximity Sentinel is a high-performance anti-cheat and security suite developed under Proximity Systems.
