@@ -1,7 +1,7 @@
 # Proximity Sentinel
 
 ![Status](https://img.shields.io/badge/status-active_development-blue)
-![Release](https://img.shields.io/badge/release-v0.1.0-informational)
+![Release](https://img.shields.io/github/v/release/EfeynN/proximity-sentinel)
 ![Security](https://img.shields.io/badge/security-policy_enabled-success)
 ![License](https://img.shields.io/badge/license-private-lightgrey)
 
