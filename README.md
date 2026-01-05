@@ -13,7 +13,7 @@ It focuses on detecting unfair gameplay, abnormal behavior patterns, and unautho
 
 ## Preview
 
-![Proximity Sentinel UI Preview](./proximity-systems-sentinelv8.png)
+![Proximity Sentinel UI Preview](./proximity-systems-sentinelacv8.png)
 
 ---
 
